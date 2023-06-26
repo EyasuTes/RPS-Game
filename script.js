@@ -79,4 +79,4 @@ function getComputerChoice(){
         }else{
             return "You lost: computer "+counC+" YOU "+counP
         }
-    }console.log(game())
+    }//console.log(game())
