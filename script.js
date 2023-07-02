@@ -84,15 +84,49 @@ function getComputerChoice(){
     }//console.log(game())
 let scop=0;
 let scoc=0;
+
+
+
 window.addEventListener('click',function(e){
     if(e.target.className === 'paper' || e.target.className==='rock' ||e.target.className==='scissor'){
-        let winner= playRound(e.target.className,getComputerChoice())
+        let val=getComputerChoice()
+        let winner= playRound(e.target.className,val)
         const win =document.querySelector('.footer')
         const scorep =document.querySelector('.playerSCO')
         const scorec =document.querySelector('.computerSCO')
-        
+        const className=e.target.className
+        //for the red player buttons
+        const paperButton = document.querySelector('.paper');
+        const rockButton = document.querySelector('.rock');
+        const scissorButton = document.querySelector('.scissor');
+        paperButton.classList.remove('playeradd')
+        rockButton.classList.remove('playeradd')
+        scissorButton.classList.remove('playeradd')
+        if(className==='paper'){
+            paperButton.classList.add('playeradd')
+        }else if(className==='rock'){
+            rockButton.classList.add('playeradd')
+        }else if(className==='scissor'){
+            scissorButton.classList.add('playeradd')
+        }
+        //for the blue computer buttons
+        const papercButton = document.querySelector('.paperc');
+        const rockcButton = document.querySelector('.rockc');
+        const scissorcButton = document.querySelector('.scissorc');
+        papercButton.classList.remove('compadd')
+        rockcButton.classList.remove('compadd')
+        scissorcButton.classList.remove('compadd')
+        if (val==='Paper'){
+            papercButton.classList.add('compadd')
+        }
+        else if(val==='Rock'){
+            rockcButton.classList.add('compadd')
+        }
+        else if(val==='Scissor'){
+            scissorcButton.classList.add('compadd')
+        }
         if (winner===1){
-            
+           
             win.textContent='You win'
             scop=scop+1;
             scorep.textContent='score = '+scop
