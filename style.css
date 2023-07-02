@@ -96,7 +96,7 @@ img{
 .playerSCO{
     display: flex;
     justify-content: left;
-    font-size: 30px;
+    font-size: 50px;
     background-color: darkred;
     color: white;
     padding: 5px;
@@ -104,8 +104,17 @@ img{
 .computerSCO{
     display: flex;
     justify-content: left;
-    font-size: 30px;
+    font-size: 50px;
     background-color: darkblue;
     color: white;
     padding: 5px;
+}
+.playeradd{
+    border: 7px solid red;
+    border-radius: 8px;
+}
+.compadd{
+    border: 7px solid blue;
+    border-radius: 8px;
+
 }
